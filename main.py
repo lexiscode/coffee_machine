@@ -42,7 +42,7 @@ while main_loop == True:
                 print("Sorry that's not enough money. Money refunded")
         if customer=="latte" and total_deposit < 2.5:
                 print("Sorry that's not enough money. Money refunded")
-        if customer=="espresso" and total_deposit < 3.0:
+        if customer=="cappuccino" and total_deposit < 3.0:
                 print("Sorry that's not enough money. Money refunded")
         ##
         
