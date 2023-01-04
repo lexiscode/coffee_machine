@@ -9,7 +9,7 @@ def money_deposit(sum):
     
     return sum
 ####
-
+#Initial Ingredient Quantity Placed in the Machine
 default_water = 300
 default_milk = 200
 default_coffee = 100
