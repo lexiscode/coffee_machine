@@ -24,8 +24,15 @@ MENU = {
     }
 }
 
+
 resources = {
     "water": 300,
     "milk": 200,
     "coffee": 100,
 }
+
+Coin Operated:
+A Penny is worth 1 cent ($0.01)
+A Nickel is worth 5 cents ($0.05)
+A Dime is worth 10 cents ($0.10)
+A Quarter is worth 25 cents ($0.25)
