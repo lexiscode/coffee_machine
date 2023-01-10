@@ -18,12 +18,16 @@ default_money = 0
 main_loop = True
 while main_loop == True:
     customer = input("What would you like? (espresso/latte/cappuccino): ").lower()
-    
+
+    # to check the report of the current state of the machine
     if customer == "report":
         print(f"Water: {default_water}ml")
         print(f"Milk: {default_milk}ml")
         print(f"Coffee: {default_coffee}g")
         print(f"Money: ${default_money}")
+    # to switch of the machine  
+    elif customer == "off":
+        main_loop = False 
     
     elif customer == "espresso" or customer == "latte" or customer == "cappuccino":
         var = money_deposit(sum)
@@ -50,7 +54,7 @@ while main_loop == True:
             if default_water < 50 or default_coffee < 18:
                 print("Sorry there is not enough ingredient needed to make espresso.")
             else:
-                print(f"Here is ${0.00} in change.\nHere is your espresso. Enjoy!")
+                print(f"Here is ${0.00} in change.\nHere is your espresso. Enjoy!☕")
                 default_water -= 50
                 default_coffee -= 18
                 default_money += total_deposit
@@ -58,7 +62,7 @@ while main_loop == True:
             if default_water < 50 or default_coffee < 18:
                 print("Sorry there is not enough ingredient needed to make espresso.")
             else:
-                print(f"Here is ${esp_change} in change.\nHere is your espresso. Enjoy!")
+                print(f"Here is ${esp_change} in change.\nHere is your espresso. Enjoy!☕")
                 default_water -= 50
                 default_coffee -= 18
                 default_money += (total_deposit - esp_change)
@@ -67,7 +71,7 @@ while main_loop == True:
             if default_water < 200 or default_coffee < 24 or default_milk < 150:
                 print("Sorry there is not enough ingredient needed to make latte.")
             else:
-                print(f"Here is ${0.00} in change.\nHere is your latte. Enjoy!")
+                print(f"Here is ${0.00} in change.\nHere is your latte. Enjoy!☕")
                 default_water -= 200
                 default_coffee -= 24
                 default_milk -= 150
@@ -76,7 +80,7 @@ while main_loop == True:
             if default_water < 200 or default_coffee < 24 or default_milk < 150:
                 print("Sorry there is not enough ingredient needed to make latte.")
             else: 
-                print(f"Here is ${lat_change} in change.\nHere is your latte. Enjoy!")
+                print(f"Here is ${lat_change} in change.\nHere is your latte. Enjoy!☕")
                 default_water -= 200
                 default_coffee -= 24
                 default_milk -= 150
@@ -86,7 +90,7 @@ while main_loop == True:
             if default_water < 250 or default_coffee < 24 or default_milk < 100:
                 print("Sorry there is not enough ingredient needed to make cappuccino.")
             else:
-                print(f"Here is ${0.00} in change.\nHere is your cappuccino. Enjoy!")
+                print(f"Here is ${0.00} in change.\nHere is your cappuccino. Enjoy!☕")
                 default_water -= 250
                 default_coffee -= 24
                 default_milk -= 100
@@ -95,7 +99,7 @@ while main_loop == True:
             if default_water < 250 or default_coffee < 24 or default_milk < 100:
                 print("Sorry there is not enough ingredient needed to make cappuccino.")
             else:
-                print(f"Here is ${cap_change} in change.\nHere is your cappuccino. Enjoy!")
+                print(f"Here is ${cap_change} in change.\nHere is your cappuccino. Enjoy!☕")
                 default_water -= 250
                 default_coffee -= 24
                 default_milk -= 100
